@@ -133,29 +133,27 @@ body {
 #fox {
 
 
-    width: 30vw;
-    height: 42.86vw;
+    width: 22vw;
+    height: 31.25vw;
 
     position: absolute;
-    transform: scale(0.8);
 
 
-
-    top: 17vw;
+    top: 13vw;
     left: 13vw;
 
 
-    background-image: url(animation-fox-02-02.svg);
-    background-size: 700%, 100%;
+    background-image: url(fox-ani-02-02.svg);
+    background-size: 400%, 100%;
 
 
 }
 
 .walking {
     animation-name: walk;
-    animation-duration: 3s;
-    animation-timing-function: steps(7);
-    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: steps(4);
+
 }
 
 
@@ -171,7 +169,7 @@ body {
     top: 20vw;
     left: 57vw;
 
-    background-image: url(bear_1-01.svg);
+    background-image: url(bear_1-01-01.svg);
     background-size: 100%, 100%;
 
     animation-name: bear;
@@ -219,8 +217,8 @@ body {
 
     from {
 
-        top: 10vw;
-        left: -20vw;
+        top: 13vw;
+        left: -10vw;
 
         background-position: 0 0;
 
@@ -229,10 +227,10 @@ body {
 
     to {
 
-        top: 10vw;
-        left: 13vw;
+        top: 13vw;
+        left: 20vw;
 
-        background-position: -700% 0%;
+        background-position: -400% 0%;
 
     }
 }
