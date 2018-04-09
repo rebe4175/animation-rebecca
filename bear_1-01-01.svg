@@ -10,13 +10,10 @@
 	.st4{stroke:#000000;stroke-miterlimit:10;}
 	.st5{fill:#FFFF03;stroke:#FFFF03;stroke-miterlimit:10;}
 </style>
-<g id="Layer_2_1_">
-</g>
 <g id="Layer_1_1_" class="st0">
 
 		<image style="display:inline;overflow:visible;enable-background:new    ;" width="720" height="960" xlink:href="BF2AAA0F.jpeg"  transform="matrix(1.259121e-16 -2.0563 2.0563 1.259121e-16 -572 811.5063)">
 	</image>
-	<path class="st1" d="M-0.5,175.5"/>
 </g>
 <g id="legs-behind">
 	<path class="st2" d="M690.5,314.5c0,0,15.5,36.5,7.5,42.5s-25.5,4.5-25.5,10.5s-3,4,4,9s36,3,43,0s19.3-57.9,19-58"/>
@@ -34,8 +31,6 @@
 <g id="details_1_">
 	<path class="st4" d="M353.5,237.5c0,0-4-9,1-9s1.1,0,10,0C362.5,231.5,358.8,234.5,353.5,237.5z"/>
 	<path class="st2" d="M425,203c0,0-2.5-10.5-0.5-14.5s15,2,15,2l-1,14c0,0-1.5-2.5-2.5-6.5s-5.5-7.5-8.5-1.5S425,203,425,203z"/>
-</g>
-<g id="Layer_8">
 </g>
 <g id="legs">
 	<path class="st3" d="M545.5,300.5c4.3,21.9,12.4,37.4,16,48c3.2,9.5-18,10-24,15s-6,13,0,14s41,2,45-3s19-69,19-69"/>

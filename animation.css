@@ -4,6 +4,56 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: 'blackhand_trialregular';
+    src: url('blackhand_trial-webfont.woff2') format('woff2'),
+    url('blackhand_trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.sectionwrapper {
+
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    margin-top: 20px;
+
+
+}
+
+.button {
+
+    background-color: skyblue;
+    color: white;
+    margin: 5px 5px;
+    padding: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'blackhand_trialregular';
+    font-size: 1.4em;
+    display: flex;
+
+
+}
+
+.button:hover {
+
+    background-color: skyblue;
+    color: white;
+    margin: 2px 2px;
+    padding: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'blackhand_trialregular';
+    font-size: 1.4em;
+    box-shadow:
+}
+
 #scene {
 
     width: 100vw;
@@ -11,6 +61,7 @@ body {
     height: 56.25vw;
     /* svarer til 900 px */
     position: relative;
+    overflow: hidden;
 }
 
 #baggrund {
@@ -20,10 +71,11 @@ body {
 
     width: 100vw;
     height: 56.25vw;
+
     position: absolute;
 
 
-    background-image: url(baggrund-01.svg);
+    background-image: url(baggrund-01-01-01.svg);
     background-size: 100%, 100%;
 }
 
@@ -39,7 +91,7 @@ body {
 
     animation-name: himmel;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+
 
 
 }
@@ -64,18 +116,16 @@ body {
 
     position: absolute;
 
-    top: 24.5vw;
-    left: 90vw;
 
-
-
-
-    background-image: url(fireflies-back.svg);
+    background-image: url(fireflies-back-01.png);
     background-size: 100%, 100%;
 
-    animation-name: ildflue bag;
-    animation-duration: 2s;
+    animation-name: ildflue_bag;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
 
 
 }
@@ -83,21 +133,29 @@ body {
 #fox {
 
 
-    width: 42.5vw;
-    height: 28.37vw;
+    width: 30vw;
+    height: 42.86vw;
+
     position: absolute;
-
-    transform: scale(0.45);
-
-
-    background-image: url(foxy.svg);
-    background-size: 100%, 100%;
+    transform: scale(0.8);
 
 
-    animation-name: fox;
-    animation-duration: 5s;
+
+    top: 17vw;
+    left: 13vw;
+
+
+    background-image: url(animation-fox-02-02.svg);
+    background-size: 700%, 100%;
+
+
+}
+
+.walking {
+    animation-name: walk;
+    animation-duration: 3s;
+    animation-timing-function: steps(7);
     animation-iteration-count: infinite;
-
 }
 
 
@@ -110,20 +168,21 @@ body {
 
     transform: scale(1.6);
 
+    top: 20vw;
+    left: 57vw;
 
-    background-image: url(bear_1.svg);
+    background-image: url(bear_1-01.svg);
     background-size: 100%, 100%;
 
     animation-name: bear;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+
 }
 
 #forgrund {
 
     width: 100vw;
     height: 56.25vw;
-
 
     position: absolute;
 
@@ -139,27 +198,41 @@ body {
     width: 100vw;
     height: 56.25vw;
 
-    background-image: url(fireflies-front-01.svg);
+
+
+    background-image: url(fireflies-front-01.png);
     background-size: 100%, 100%;
 
     position: absolute;
 
+
+    animation-name: ildfluer_front;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
 }
 
 
-@keyframes fox {
+@keyframes walk {
 
     from {
 
-        top: 17vw;
+        top: 10vw;
         left: -20vw;
+
+        background-position: 0 0;
+
 
     }
 
     to {
 
-        top: 17vw;
+        top: 10vw;
         left: 13vw;
+
+        background-position: -700% 0%;
 
     }
 }
@@ -179,4 +252,74 @@ body {
         left: 57vw;
     }
 
+}
+
+@keyframes ildfluer_front {
+
+    0% {
+
+        left: 0vw;
+        top: 0vw;
+
+    }
+
+    25% {
+
+        left: 1vw;
+        top: 0vw;
+    }
+
+    50% {
+
+        left: 1vw;
+        top: -1vw;
+    }
+
+    75% {
+
+        left: 0vw;
+        top: -1vw;
+    }
+
+    100% {
+
+        left: 0vw;
+        top: 0vw;
+    }
+}
+
+
+
+@keyframes ildflue_bag {
+
+    0% {
+
+        left: 0vw;
+        top: 0vw;
+
+    }
+
+    25% {
+
+        left: 1vw;
+        top: 0vw;
+    }
+
+    50% {
+
+        left: 1vw;
+        top: -1vw;
+    }
+
+    75% {
+
+        left: 0vw;
+        top: -1vw;
+    }
+
+    100% {
+
+        left: 0vw;
+        top: 0vw;
+    }
 }
