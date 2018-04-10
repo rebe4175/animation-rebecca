@@ -138,9 +138,8 @@ body {
 
     position: absolute;
 
-
+    left: 30vw;
     top: 13vw;
-    left: 13vw;
 
 
     background-image: url(fox-ani-02-02.svg);
@@ -151,8 +150,9 @@ body {
 
 .walking {
     animation-name: walk;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
 
 }
 
@@ -217,23 +217,81 @@ body {
 
     from {
 
-        top: 13vw;
-        left: -10vw;
-
         background-position: 0 0;
-
 
     }
 
     to {
 
-        top: 13vw;
-        left: 20vw;
-
         background-position: -400% 0%;
+    }
+}
+
+#fox_container {
+
+    position: absolute;
+}
+
+.moving {
+
+    animation-name: moving_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moving_kf {
+
+    0% {
+
+        left: -30vw;
+        top: 0vw;
+
+    }
+
+    100% {
+
+        left: 0vw;
+        top: 0vw;
 
     }
 }
+
+/*
+
+.moving_out {
+
+    animation-name: moving_out_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+
+.standing_center {
+
+    left: 35;
+
+
+}
+
+@keyframes moving_out_kf {
+
+    0% {
+        left: 35vw;
+
+    }
+
+    100% {
+
+        left: -35vw;
+    }
+
+}
+
+*/
 
 @keyframes bear {
 
