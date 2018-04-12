@@ -130,7 +130,13 @@ body {
 
 }
 
-#fox {
+
+#bear_container {
+
+    position: absolute;
+}
+
+#bear_sprite {
 
 
     width: 22vw;
@@ -138,7 +144,32 @@ body {
 
     position: absolute;
 
-    left: 30vw;
+    transform: scale(2.2);
+
+    top: 10vw;
+    left: 65vw;
+
+    background-image: url(rip_bear-02.svg);
+    background-size: 700%, 100%;
+
+
+}
+
+#fox_container {
+
+    position: absolute;
+}
+
+
+#fox_sprite {
+
+
+    width: 22vw;
+    height: 31.25vw;
+
+    position: absolute;
+
+    left: 20vw;
     top: 13vw;
 
 
@@ -148,34 +179,97 @@ body {
 
 }
 
-.walking {
-    animation-name: walk;
+/* ræv kommer ind */
+
+.moving_fox {
+
+    animation-name: moving_fox_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes moving_fox_kf {
+
+    0% {
+
+        left: -35vw;
+
+
+    }
+
+    100% {
+
+        left: 0vw;
+
+    }
+}
+
+/* ræv går */
+
+.walk_fox {
+    animation-name: walk_fox_kf;
     animation-duration: 1s;
     animation-timing-function: steps(4);
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 
 }
 
+@keyframes walk_fox_kf {
 
-#bear {
+    0% {
 
+        background-position: 0 0;
+    }
 
-    width: 120vw;
-    height: 67.5vw;
-    position: absolute;
+    100% {
 
-    transform: scale(1.6);
+        background-position: -400% 0%;
+    }
+}
 
-    top: 20vw;
-    left: 57vw;
+/* ræv står stille */
 
-    background-image: url(bear_1-01-01.svg);
-    background-size: 100%, 100%;
+.fox_center {
 
-    animation-name: bear;
-    animation-duration: 5s;
+    animation-name: fox_still_kf;
+    animation-duration: infinite;
 
 }
+
+@keyframes fox_still_kf {
+
+    left: 20vw;
+}
+
+
+.bear_center {
+
+    animation-name: bear_still_kf;
+    animation-duration: infinite;
+
+}
+
+@keyframes bear_still_kf {
+
+    left: 65vw;
+}
+
+
+
+/* ræv vender sig om */
+
+.fox_turn {
+
+    animation-name: fox_turn_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+}
+
 
 #forgrund {
 
@@ -213,61 +307,63 @@ body {
 }
 
 
-@keyframes walk {
+.walk_bear {
+
+    animation-name: walk_bear_kf;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite;
+
+}
+
+
+
+
+@keyframes walk_bear_kf {
 
     from {
 
         background-position: 0 0;
-
     }
 
     to {
 
-        background-position: -400% 0%;
+        background-position: -700% 0%;
     }
 }
 
-#fox_container {
 
-    position: absolute;
-}
 
-.moving {
 
-    animation-name: moving_kf;
-    animation-duration: 5s;
+.moving_bear {
+
+    animation-name: moving_bear_kf;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
 }
 
-@keyframes moving_kf {
+
+
+@keyframes moving_bear_kf {
 
     0% {
 
-        left: -30vw;
-        top: 0vw;
+        left: 60vw;
+
 
     }
 
     100% {
 
         left: 0vw;
-        top: 0vw;
+
 
     }
 }
 
-/*
-
-.moving_out {
-
-    animation-name: moving_out_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
-}
 
 
 .standing_center {
@@ -277,38 +373,8 @@ body {
 
 }
 
-@keyframes moving_out_kf {
 
-    0% {
-        left: 35vw;
 
-    }
-
-    100% {
-
-        left: -35vw;
-    }
-
-}
-
-*/
-
-@keyframes bear {
-
-    from {
-
-        top: 20vw;
-        left: 100vw;
-
-    }
-
-    to {
-
-        top: 20vw;
-        left: 57vw;
-    }
-
-}
 
 @keyframes ildfluer_front {
 
