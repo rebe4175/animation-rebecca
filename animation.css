@@ -51,7 +51,7 @@ body {
     text-decoration: none;
     font-family: 'blackhand_trialregular';
     font-size: 1.4em;
-    box-shadow:
+
 }
 
 #scene {
@@ -147,7 +147,7 @@ body {
     transform: scale(2.2);
 
     top: 10vw;
-    left: 65vw;
+    left: 68vw;
 
     background-image: url(rip_bear-02.svg);
     background-size: 700%, 100%;
@@ -165,15 +165,15 @@ body {
 
 
     width: 22vw;
-    height: 31.25vw;
+    height: 15.25vw;
 
     position: absolute;
 
-    left: 20vw;
-    top: 13vw;
+    left: 30vw;
+    top: 22vw;
 
 
-    background-image: url(fox-ani-02-02.svg);
+    background-image: url(virknupls.svg);
     background-size: 400%, 100%;
 
 
@@ -184,7 +184,7 @@ body {
 .moving_fox {
 
     animation-name: moving_fox_kf;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
@@ -195,7 +195,7 @@ body {
 
     0% {
 
-        left: -35vw;
+        left: -30vw;
 
 
     }
@@ -236,40 +236,154 @@ body {
 .fox_center {
 
     animation-name: fox_still_kf;
-    animation-duration: infinite;
+    animation-iteration-count: infinite;
 
 }
 
 @keyframes fox_still_kf {
 
-    left: 20vw;
-}
+    100% {
 
+        left: 30vw;
+    }
+
+}
 
 .bear_center {
 
     animation-name: bear_still_kf;
-    animation-duration: infinite;
+    animation-iteration-count: infinite;
 
 }
 
 @keyframes bear_still_kf {
 
-    left: 65vw;
-}
+    100% {
 
+        left: 65vw;
+    }
+}
 
 
 /* ræv vender sig om */
 
 .fox_turn {
 
-    animation-name: fox_turn_kf;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
+    animation-name: turningfox_kf;
+    animation-direction: normal;
+    animation-duration: 1s;
+
+
+
 
 }
 
+@keyframes turningfox_kf {
+
+    0% {
+
+        background-position: -100% 100%;
+        left: 30vw;
+
+    }
+
+
+    100% {
+
+        background-position: -100% 100%;
+        left: 30vw;
+
+    }
+
+}
+
+/* ræv løber */
+
+.fox_run_move {
+
+    animation-name: foxrunmove_kf;
+    animation-duration: 1s;
+
+
+}
+
+
+@keyframes foxrunmove_kf {
+
+
+    0% {
+
+        left: 0vw;
+
+
+
+    }
+
+    100% {
+
+        left: -20vw;
+
+    }
+
+
+}
+
+.fox_run {
+
+    animation-name: foxruns_kf;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+
+
+}
+
+
+
+
+@keyframes foxruns_kf {
+
+    0% {
+
+        background-position: 0% 100%;
+    }
+
+    100% {
+
+        background-position: 400% 100%;
+    }
+}
+
+
+/* fox lose */
+
+.fox_lose {
+
+    animation-name: foxlose_kf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes foxlose_kf {
+
+
+    0% {
+
+        left: 10vw;
+        background-position: 200 100%;
+        transform: scale(-1);
+        top: 25vw;
+    }
+
+    100% {
+
+        left: 10vw;
+        background-position: 200 100%;
+        transform: scale(-1);
+        top: 25vw;
+    }
+}
 
 #forgrund {
 
@@ -365,16 +479,51 @@ body {
 }
 
 
+.bear_attack {
 
-.standing_center {
-
-    left: 35;
-
+    animation-name: bear_attack_kf;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 
 }
 
 
 
+@keyframes bear_attack_kf {
+
+    0% {
+
+        left: 0vw;
+
+
+    }
+
+    50% {
+
+        left: -55vw;
+
+
+    }
+
+    100% {
+
+        left: 0vw;
+    }
+}
+
+
+
+.standing_center {
+
+    100% {
+
+        left: 35;
+
+    }
+
+}
 
 @keyframes ildfluer_front {
 
