@@ -1,9 +1,10 @@
-$(window).on("load", sidenVises)
+$(window).on("load", sidenVises);
 
 function sidenVises() {
 
-    console.log("sidenVises")
+    console.log("sidenVises");
 
+    $("#quietmusic")[0].play();
 
     $("#fox_container").addClass("moving_fox");
     $("#fox_sprite").addClass("walk_fox");
@@ -41,9 +42,13 @@ function stopBear() {
     $("#bear_sprite").removeClass("walk_bear");
     $("#bear_container").addClass("bear_center");
 
+    $("#growl")[0].play();
+
     $("#fox_container").on("animationend", turnFox);
 
 }
+
+// valgmulighed 1
 
 function turnFox() {
 
@@ -89,4 +94,53 @@ function foxLose() {
     $("#bear_container").removeClass("bear_attack");
 
     $("#fox_sprite").addClass("fox_lose");
+
+    $("#foxdies")[0].play();
+
+    $("#fox_container").on("animationend", foxyfox);
+
+
+
+}
+
+
+function foxyfox() {
+
+    console.log("foxyfox");
+
+    $("#fox_container").off("animationend", foxyfox);
+
+    $("#fox_container").on("animationend", foxLose);
+
+
+}
+
+
+//valgmulighed 2
+
+function foxAttack() {
+
+    console.log("foxAttack");
+
+    $("#fox_container").off("animationend", foxAttack);
+
+    $("#fox_container").addClass("fox_attack");
+
+    $("#fox_container").on("animationend", bearLose);
+
+
+}
+
+
+function bearLose() {
+
+    console.log("bearLose");
+
+    $("#fox_container").off("animationend", bearLose);
+
+    $("#fox_container").removeClass("fox_attack");
+    $("#bear_sprite").addClass("bear_dies");
+
+
+
 }
