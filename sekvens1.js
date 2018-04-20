@@ -9,9 +9,15 @@ function sidenVises() {
 
     console.log("sidenVises");
 
+
     $("#quietmusic")[0].play();
 
+
+
+
     $("#fox_sprite2").hide();
+    $("#bear_sprite2").hide();
+    $("#bear_sprite3").hide();
 
     $("#valg1").hide();
     $("#valg2").hide();
@@ -119,11 +125,14 @@ function foxLose() {
 
     console.log("foxLose");
 
-
+    $("#bear_sprite").hide();
+    $("#bear_sprite3").show();
 
     $("#fox_container").off("animationend", foxLose);
 
     $("#clawmarks").hide();
+
+    $("#foxdies")[0].play();
 
 
     $("#fox_container").removeClass("fox_run_move");
@@ -132,7 +141,7 @@ function foxLose() {
 
     $("#fox_sprite").addClass("fox_lose");
 
-    $("#foxdies")[0].play();
+
 
 
 }
@@ -243,16 +252,11 @@ function foxfaerdig() {
 
         (erDerKlikketNok == false);
         console.log("fox losing");
-        foxLose();
+        turnFox();
 
     }
 }
 
-
-function foxAttack() {
-    $("fox_container").removeClass("fox_charge");
-    $("fox_container").addClass("fox_charge");
-}
 
 
 
@@ -284,41 +288,20 @@ function foxWins() {
 
 function foxVictory() {
 
+
+
     console.log("fox victory");
 
     $("#fox_sprite").hide();
     $("#fox_sprite2").show();
 
+    $("#bear_sprite").hide();
+    $("#bear_sprite2").show();
+
     $("#fox_container").off("animationend", foxWins);
 
     $("#fox_container").removeClass("fox_attack");
     $("#fox_sprite2").addClass("win_fox");
-
-
-}
-
-function foxLoseAgain() {
-
-    console.log("bearLose");
-
-    $("#fox_container").off("animationend", bearLose);
-
-    $("#fox_container").removeClass("fox_attack");
-    $("#bear_sprite").addClass("bear_dies");
-
-
-}
-
-
-
-function bearWin() {
-
-    console.log("bearWin");
-
-    $("#fox_container").off("animationend", bearLose);
-
-    $("#fox_container").removeClass("fox_attack");
-    $("#bear_sprite").addClass("bear_dies");
 
 
 }

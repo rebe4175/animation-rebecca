@@ -13,6 +13,17 @@ body {
 
 }
 
+#titel {
+
+    background-image: url(titelblad.svg);
+    background-size: 100%, 100%;
+
+    width: 140vh;
+    height: 100vh;
+
+
+}
+
 #valg1 {
 
     background-color: rgba(0, 200, 250, 0.5);
@@ -30,6 +41,7 @@ body {
     padding: 2px;
     z-index: 200;
     border-radius: 10px;
+    cursor: pointer;
 
 }
 
@@ -49,7 +61,8 @@ body {
     top: 15vw;
     transform: scale(1.2);
     z-index: 200;
-    border-radius: 10px
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #valg2 {
@@ -68,7 +81,8 @@ body {
     top: 15vw;
     padding: 2px;
     z-index: 200;
-    border-radius: 10px
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #charge {
@@ -89,6 +103,7 @@ body {
     border-radius: 50px;
     vertical-align: middle;
     line-height: 100px;
+    cursor: pointer;
 }
 
 .puls {
@@ -128,7 +143,8 @@ body {
     top: 15vw;
     padding: 2px;
     z-index: 200;
-    border-radius: 10px
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -154,6 +170,7 @@ body {
     font-family: 'blackhand_trialregular';
     font-size: 1.4em;
     display: flex;
+    cursor: pointer;
 
 
 }
@@ -169,6 +186,7 @@ body {
     text-decoration: none;
     font-family: 'blackhand_trialregular';
     font-size: 1.4em;
+    cursor: pointer;
 
 }
 
@@ -249,6 +267,23 @@ body {
 
 }
 
+#bear_sprite3 {
+
+    width: 16vw;
+    height: 44vw;
+
+    position: absolute;
+
+    transform: scale(0.9);
+
+    left: 60vw;
+
+
+
+    background-image: url(bear_side_now.svg);
+    background-size: 100%, 100%;
+}
+
 
 #bear_container {
 
@@ -283,7 +318,7 @@ body {
 #fox_sprite {
 
 
-    width: 22vw;
+    width: 20vw;
     height: 22.25vw;
 
     position: absolute;
@@ -871,3 +906,28 @@ body {
 
     }
 }
+
+#bear_sprite2 {
+
+    width: 50.8vw;
+    height: 60.25vw;
+
+    position: absolute;
+
+
+    top: -8vw;
+    left: 50vw;
+
+    background-image: url(bearDie-01.svg);
+    background-size: 100%, 100%;
+}
+
+.bear_attack_again {
+
+    position: absolute;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: bearattackagainkf;
+}
+
+@keyframes bearattacksagainkf {}
