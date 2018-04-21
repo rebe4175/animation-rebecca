@@ -15,12 +15,105 @@ body {
 
 #titel {
 
-    background-image: url(titelblad.svg);
-    background-size: 100%, 100%;
+    background-image: url(blink.svg);
+    background-size: 100%, 200%;
 
-    width: 140vh;
-    height: 100vh;
 
+    width: 100vw;
+    /* svarer til 1600px */
+    height: 56.25vw;
+    /* svarer til 900 px */
+    animation-name: blinkingeyes_kf;
+
+    ;
+
+    animation: blinkingeyes_kf 4s infinite forwards steps(2);
+
+
+    z-index: 10;
+    position: absolute;
+
+}
+
+@keyframes blinkingeyes_kf {
+
+    0% {
+
+        background-position: 0 0;
+    }
+
+    10% {
+
+        background-position: 0 200%;
+    }
+
+
+    100% {
+
+        background-position: 0 200%;
+    }
+
+
+}
+
+#startknap {
+
+    color: white;
+    font-family: 'blackhand_trialregular', sans-serif;
+    font-size: 2.8em;
+    margin: 0px;
+    padding: 0px;
+    left: 70vw;
+    top: 17vw;
+    position: absolute;
+}
+
+#navn {
+
+    color: white;
+    font-family: 'blackhand_trialregular', sans-serif;
+    font-size: 3.4em;
+    margin-top: 5px;
+    padding: 10px;
+
+
+    left: 30vw;
+    top: 5vw;
+    position: absolute;
+
+    animation-name: navn_kf;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+
+}
+
+
+@keyframes navn_kf {
+
+    0% {
+
+        color: aquamarine;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+#startknap:hover {
+
+    color: white;
+    font-family: 'blackhand_trialregular', sans-serif;
+    font-size: 2.8em;
+    margin: 0px;
+    padding: 0px;
+    left: 70vw;
+    top: 17vw;
+    cursor: pointer;
+    position: absolute;
+    transform: scale(1.1);
 
 }
 
@@ -43,6 +136,66 @@ body {
     border-radius: 10px;
     cursor: pointer;
 
+}
+
+#tryagain {
+
+    background-color: rgba(0, 200, 250, 0.6);
+    color: white;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'blackhand_trialregular', sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 35vw;
+    top: 5vw;
+    padding: 7px;
+    z-index: 200;
+    border-radius: 100px;
+    line-height: 30px;
+}
+
+#tryagainwin {
+
+    background-color: rgba(0, 200, 250, 0.6);
+    color: white;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'blackhand_trialregular', sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 35vw;
+    top: 5vw;
+    padding: 7px;
+    z-index: 200;
+    border-radius: 100px;
+    line-height: 30px;
+}
+
+#againbutton {
+
+    cursor: pointer;
+}
+
+#againbutton:hover {
+
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#againbutton2 {
+
+    cursor: pointer;
+}
+
+#againbutton2:hover {
+
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 #valg1:hover {
@@ -163,8 +316,8 @@ body {
     background-color: skyblue;
     color: white;
     margin: 5px 5px;
-    padding: 10px;
-    letter-spacing: 3px;
+    padding: 15px;
+
     text-align: center;
     text-decoration: none;
     font-family: 'blackhand_trialregular';
@@ -179,14 +332,14 @@ body {
 
     background-color: skyblue;
     color: white;
-    margin: 2px 2px;
+    margin: 5px 5px;
     padding: 10px;
-    letter-spacing: 3px;
     text-align: center;
     text-decoration: none;
     font-family: 'blackhand_trialregular';
     font-size: 1.4em;
     cursor: pointer;
+    transform: scale(1.1);
 
 }
 
@@ -253,7 +406,6 @@ body {
 
     position: absolute;
 
-
     background-image: url(fireflies-back-01.png);
     background-size: 100%, 100%;
 
@@ -309,6 +461,28 @@ body {
 
 }
 
+#ildfluer_first {
+
+    width: 100vw;
+    height: 56.25vw;
+
+    background-image: url(fireflies-front-01.png);
+    background-size: 100%, 100%;
+
+    position: absolute;
+
+    transform: scale();
+
+
+    animation-name: ildfluer_front;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+
+}
+
 #fox_container {
 
     position: absolute;
@@ -318,8 +492,8 @@ body {
 #fox_sprite {
 
 
-    width: 20vw;
-    height: 22.25vw;
+    width: 21.9vw;
+    height: 21.4vw;
 
     position: absolute;
 
@@ -472,9 +646,6 @@ body {
         left: 0vw;
         top: -4vw;
 
-
-
-
     }
 
     100% {
@@ -495,7 +666,6 @@ body {
 
 
 }
-
 
 
 
@@ -604,8 +774,6 @@ body {
     width: 100vw;
     height: 56.25vw;
 
-
-
     background-image: url(fireflies-front-01.png);
     background-size: 100%, 100%;
 
@@ -624,7 +792,7 @@ body {
 .walk_bear {
 
     animation-name: walk_bear_kf;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: steps(7);
     animation-iteration-count: infinite;
@@ -806,6 +974,8 @@ body {
     height: 25vw;
 
 
+    left: 12vw;
+    top: 13vw;
 
     position: absolute;
 
@@ -818,8 +988,9 @@ body {
 .klo {
 
     animation-name: klokf;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-duration: 1s;
+    animation-iteration-count: 1;
 
 }
 
@@ -832,11 +1003,18 @@ body {
         transform: scale(1);
     }
 
+    50% {
+
+        left: 12vw;
+        top: 15vw;
+        transform: scale(1.2);
+    }
+
     100% {
 
         left: 12vw;
         top: 15vw;
-        transform: scale(0);
+        transform: scale(1);
     }
 }
 
@@ -868,7 +1046,6 @@ body {
 
 
 #fox_sprite2 {
-
 
     width: 21.8vw;
     height: 31.25vw;
@@ -914,20 +1091,9 @@ body {
 
     position: absolute;
 
-
     top: -8vw;
     left: 50vw;
 
     background-image: url(bearDie-01.svg);
     background-size: 100%, 100%;
 }
-
-.bear_attack_again {
-
-    position: absolute;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-name: bearattackagainkf;
-}
-
-@keyframes bearattacksagainkf {}
